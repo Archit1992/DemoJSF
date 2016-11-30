@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:fcore="http://java.sun.com/jsf/core">
+    
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <center>
+            <fcore:view>
+                <h:form>
+                    <h:dataTable var="listStudent" value="#{studentManagedBean.controller.allStudent}" border="1" cellpadding="2" cellspacing="2">
+                        <h:column>
+                            <fcore:facet name="header">Student ID</fcore:facet>
+                            <h:inputText value="#{listStudent.id}"></h:inputText>
+                        </h:column>
+                        <h:column>
+                            <fcore:facet name="header">First Name</fcore:facet>
+                            <h:inputText value="#{listStudent.firstName}"></h:inputText>
+                        </h:column>
+                        <h:column>
+                            <fcore:facet name="header">Last Name</fcore:facet>
+                            <h:inputText value="#{listStudent.lastName}"></h:inputText>
+                        </h:column>    
+                    </h:dataTable>  
+                      <h:commandLink action="ListAll">All Books</h:commandLink>
+                </h:form>
+            </fcore:view>
+        </center>
+      
+    </h:body>
+</html>
+
